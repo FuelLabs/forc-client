@@ -4,11 +4,8 @@ Forc plugin for interacting with a Fuel node.
 
 This plugin provides the `forc deploy` and `forc run` commands.
 
-Note: You will probably require the accompanying [`forc-wallet`](https://github.com/FuelLabs/forc-wallet) plugin in order to sign your transactions:
+_Note: You will require the plugin [`forc-wallet`](https://github.com/FuelLabs/forc-wallet) in order to sign your transactions._
 
-```sh
-cargo install forc-wallet
-```
 
 ## Examples
 
@@ -33,6 +30,8 @@ Also the default value of the "gas price" parameter is 0 for both `forc-deploy` 
 ```sh
 forc deploy --url https://node-beta-1.fuel.network/graphql:443 --gas-price 1
 ```
+
+For more information and usage examples, please refer to the [forc-client section in the Sway book.](https://fuellabs.github.io/sway/master/forc_client.html)
 
 ## License
 
