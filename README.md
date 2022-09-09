@@ -2,6 +2,7 @@
 
 Forc plugin for interacting with a Fuel node.
 
+This plugin provides the `forc deploy` and `forc run` commands.
 
 Note: You will probably require the accompanying [`forc-wallet`](https://github.com/FuelLabs/forc-wallet) plugin in order to sign your transactions:
 
