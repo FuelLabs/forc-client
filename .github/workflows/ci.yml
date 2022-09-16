@@ -213,9 +213,9 @@ jobs:
         run: |
           # Get tag name
           # See: https://github.community/t5/GitHub-Actions/How-to-get-just-the-tag-name/m-p/32167/highlight/true#M1027
-          FUELUP_VERSION="${GITHUB_REF#refs/tags/}"
+          FORC_CLIENT_VERSION="${GITHUB_REF#refs/tags/}"
           # trim v from tag prefix
-          FUELUP_VERSION="${FORC_CLIENT_VERSION#v}"
+          FORC_CLIENT_VERSION="${FORC_CLIENT_VERSION#v}"
           echo "version is: $FORC_CLIENT_VERSION"
           # setup artifact filename
           ARTIFACT="forc-client-$FORC_CLIENT_VERSION-${{ env.TARGET }}"
