@@ -191,7 +191,9 @@ jobs:
 
       - name: Strip release binary x86_64-linux-gnu
         if: matrix.job.target == 'x86_64-unknown-linux-gnu'
-        run: strip "target/${{ matrix.job.target }}/release/forc-client"
+        run: |
+          strip "target/${{ matrix.job.target }}/release/forc-deploy"
+          strip "target/${{ matrix.job.target }}/release/forc-run"
 
       - name: Strip release binary aarch64-linux-gnu
         if: matrix.job.target == 'aarch64-unknown-linux-gnu'
@@ -200,10 +202,18 @@ jobs:
           "$PWD/target:/target:Z" \
           ghcr.io/cross-rs/aarch64-unknown-linux-gnu:main \
           aarch64-linux-gnu-strip \
-          /target/aarch64-unknown-linux-gnu/release/forc-client
+          /target/aarch64-unknown-linux-gnu/release/forc-deploy
+
+          docker run --rm -v \
+          "$PWD/target:/target:Z" \
+          ghcr.io/cross-rs/aarch64-unknown-linux-gnu:main \
+          aarch64-linux-gnu-strip \
+          /target/aarch64-unknown-linux-gnu/release/forc-run
       - name: Strip release binary mac
         if: matrix.job.os == 'macos-latest'
-        run: strip -x "target/${{ matrix.job.target }}/release/forc-client"
+        run: |
+          strip -x "target/${{ matrix.job.target }}/release/forc-deploy"
+          strip -x "target/${{ matrix.job.target }}/release/forc-run"
 
       - name: Prep assets
         id: prep_assets
@@ -223,7 +233,8 @@ jobs:
           echo "ZIP_FILE_NAME=$ZIP_FILE_NAME" >> $GITHUB_ENV
           # create zip file
           mkdir -pv "$ARTIFACT"
-          cp "target/${{ matrix.job.target }}/release/forc-client" "$ARTIFACT"
+          cp "target/${{ matrix.job.target }}/release/forc-deploy" "$ARTIFACT"
+          cp "target/${{ matrix.job.target }}/release/forc-run" "$ARTIFACT"
           tar -czvf $ZIP_FILE_NAME "$ARTIFACT"
 
       - name: Upload release archive
