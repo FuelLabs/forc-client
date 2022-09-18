@@ -140,6 +140,7 @@ jobs:
 
   release-binaries:
     name: Release forc-client binaries
+    if: github.event_name == 'release' && github.event.action == 'published'
     runs-on: ${{ matrix.job.os }}
     needs:
       - lint-toml-files
