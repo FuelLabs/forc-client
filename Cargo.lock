@@ -1334,9 +1334,9 @@ dependencies = [
 
 [[package]]
 name = "forc-pkg"
-version = "0.24.4"
+version = "0.24.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "079226581680f68de25bd58d60abe51d03d78423e9dd24c1911767078b4201c8"
+checksum = "c68dff1dadd22090e667169acdaf64fcbc2bcdf03e49e7ab70b4aab9d4997f8d"
 dependencies = [
  "anyhow",
  "forc-util",
@@ -1360,9 +1360,9 @@ dependencies = [
 
 [[package]]
 name = "forc-util"
-version = "0.24.4"
+version = "0.24.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5b54c992ba3cba624db4b3235d71ee3b41c0321e7406fbb8d48cbb91ef44dc72"
+checksum = "70edd1383f53cd4c50229782d2e985fb4d4394a47bce3abed0aaa6fadc5c8397"
 dependencies = [
  "annotate-snippets",
  "ansi_term",
@@ -1505,9 +1505,9 @@ dependencies = [
 
 [[package]]
 name = "fuels-core"
-version = "0.21.0"
+version = "0.24.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2d60c30cabd0a7c08b634937284a4d2e4a5c7d29daf6f6b4630743f1f474d5a7"
+checksum = "8625a70417e40a9b06a816d3a12439717b39eb676bf044bdbc6def7c9dc284ef"
 dependencies = [
  "Inflector",
  "anyhow",
@@ -1516,6 +1516,7 @@ dependencies = [
  "fuels-types",
  "hex",
  "itertools",
+ "lazy_static",
  "proc-macro2",
  "quote",
  "rand 0.8.5",
@@ -1531,9 +1532,9 @@ dependencies = [
 
 [[package]]
 name = "fuels-signers"
-version = "0.21.0"
+version = "0.24.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2fa8399ede6717438eb8429d0a3d6852b60abe7a29a456c5f1d1870c571ac02a"
+checksum = "51ad744179521c259b8d07486b1ddab96881b5624f95a3dad648ab965ced1c0d"
 dependencies = [
  "async-trait",
  "bytes",
@@ -1554,15 +1555,17 @@ dependencies = [
 
 [[package]]
 name = "fuels-types"
-version = "0.21.0"
+version = "0.24.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7f6097a178b4f5afae612010f97b92aefd62cdc4673195e7d39681cdc15cd51d"
+checksum = "880266d1bac5703c918759ea8bb06b8e3431425fc7bd512e0f4f03ac69c8f386"
 dependencies = [
  "anyhow",
  "bech32 0.9.1",
  "fuel-tx",
  "hex",
+ "lazy_static",
  "proc-macro2",
+ "regex",
  "serde",
  "serde_json",
  "strum",
@@ -3347,9 +3350,9 @@ dependencies = [
 
 [[package]]
 name = "sway-ast"
-version = "0.24.4"
+version = "0.24.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "620de34f0e9bcc52eee307ca32d8fe2373ebdc9b4334e6a5f8e0d7ffadc778af"
+checksum = "27b5d7391e53e771e98e7bed26257db5330e25b33dce140a9a793f9d66349b68"
 dependencies = [
  "extension-trait",
  "num-bigint",
@@ -3359,9 +3362,9 @@ dependencies = [
 
 [[package]]
 name = "sway-core"
-version = "0.24.4"
+version = "0.24.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b14429e1dbd17de2ccad4591ce7563e752376015808765e60d254152135d0d1b"
+checksum = "ae5231369f5c3fc75e09b3183e66d7478298808fc0acdd96873bdb155f2a7a7a"
 dependencies = [
  "derivative",
  "dirs 3.0.2",
@@ -3392,9 +3395,9 @@ dependencies = [
 
 [[package]]
 name = "sway-ir"
-version = "0.24.4"
+version = "0.24.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ed99c46bfe9b89387eda4ad39dacdb4922bd6a42a011a779063e3051d88d7cdd"
+checksum = "b80ae24a0a4c919b91c0712cfba063baaa9137cbfed016e3f071bb35ff92bd28"
 dependencies = [
  "anyhow",
  "filecheck",
@@ -3406,9 +3409,9 @@ dependencies = [
 
 [[package]]
 name = "sway-ir-macros"
-version = "0.24.4"
+version = "0.24.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1dcbe3b40cf41d695ca5d5106d62c416d0ad4206e739d401fbb48b19ca1bd8e4"
+checksum = "cb99812b2afcbb8dfdd40a9f83cfba65e23666c4067318edb587eb73f1b5e525"
 dependencies = [
  "itertools",
  "proc-macro2",
@@ -3418,9 +3421,9 @@ dependencies = [
 
 [[package]]
 name = "sway-parse"
-version = "0.24.4"
+version = "0.24.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "53b9eb42cd127271ac5c842b7f32ec8dfdd1ffcbcb9a8f0e8a2980919e368f1e"
+checksum = "8010a25eb78bdfbca059ea93e9e65cad729be7fdc92096aca7fe07fd1a65cb36"
 dependencies = [
  "extension-trait",
  "num-bigint",
@@ -3434,9 +3437,9 @@ dependencies = [
 
 [[package]]
 name = "sway-types"
-version = "0.24.4"
+version = "0.24.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7c1c16fcccb6a23554864de70ebcd0f1f29579d2ab4e395526148f18d64b4f4f"
+checksum = "cf98a07753edc6facd2c19d6e7be73188734aa1392c06130542bee3ae473c984"
 dependencies = [
  "fuel-asm",
  "fuel-crypto",
@@ -3447,9 +3450,9 @@ dependencies = [
 
 [[package]]
 name = "sway-utils"
-version = "0.24.4"
+version = "0.24.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ed0d7afec00f7fa125e54f90ef6993f59f92176d56591ded86e60297999270f7"
+checksum = "10e6cd4854779bffd6490844081db1c23badaf486f2f79d7f7f663188792a7d6"
 
 [[package]]
 name = "syn"
